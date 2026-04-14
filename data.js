@@ -13,7 +13,7 @@ const skills = [
     faq:"Q: 访谈人数多少合适？\nA: 用户访谈通常 5-8 人即可发现 80% 以上的问题\n\nQ: 如何避免引导性问题？\nA: 使用 \"告诉我…\" \"描述一下…\" 而非 \"你是不是觉得…\"\n\nQ: 输入信息不够怎么办？\nA: 先补充研究目标和假设，输入越具体输出越有针对性"
   },
   { id:"S-0002", name:"用户旅程地图生成", type:"skill", value:"快速将用户场景转化为完整的用户旅程地图，识别痛点与机会点", stage:"调研/需求", tags:["交互设计","用户旅程","体验地图"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/user-journey-map", skillsSh:"user-journey-map", installCmd:"claude skills add user-journey-map",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill ux-audit-rethink",
     scene:"梳理用户从接触产品到完成目标的全流程体验，识别关键触点和情绪波动",
     input:"【产品/功能】…\n【目标用户画像】…\n【核心场景】…\n【已知痛点】…\n【业务目标】…",
     steps:"1) 收集输入（产品信息/用户画像/场景）\n2) 拆解阶段（认知→考虑→使用→留存→推荐）\n3) 每阶段填充：用户行为/触点/情绪/痛点/机会点\n4) 标注关键 MOT（Moment of Truth）\n5) 输出可视化旅程地图 + 优先级排序的优化建议",
@@ -21,7 +21,7 @@ const skills = [
     quality:"阶段完整、触点可追溯、痛点有证据支撑、建议可执行", boundary:"不替代真实用户调研；基于假设的旅程需标注\"待验证\"", faq:"缺少用户画像时先用\"假设用户\"标注，后续用调研验证"
   },
   { id:"S-0003", name:"信息架构梳理与导航设计", type:"skill", value:"从功能列表或 PRD 快速生成结构化信息架构和导航方案", stage:"设计", tags:["交互设计","信息架构","导航"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/information-architecture", skillsSh:"information-architecture", installCmd:"claude skills add information-architecture",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill ux-audit-rethink",
     scene:"从一堆功能点或 PRD 组织成合理的页面层级和导航结构",
     input:"【产品类型】（B端/C端/后台…）\n【功能清单】…\n【用户角色】…\n【核心任务 Top3】…\n【参考竞品】…",
     steps:"1) 卡片分类：将功能按用户心智模型分组\n2) 确定层级：扁平 vs 深层，控制在 3 级以内\n3) 设计导航模式（Tab/侧边栏/面包屑组合）\n4) 绘制站点地图（Sitemap）\n5) 标注页面间跳转关系和快捷入口\n6) 输出导航方案 + 理由说明",
@@ -29,7 +29,7 @@ const skills = [
     quality:"层级 ≤ 3 级、分组符合用户心智、核心任务 ≤ 3 步可达", boundary:"不做视觉稿；复杂B端系统建议配合卡片分类测试验证"
   },
   { id:"S-0004", name:"交互流程图与页面流设计", type:"skill", value:"将需求描述转化为完整的交互流程图，覆盖主流程和异常分支", stage:"设计", tags:["交互设计","流程图","页面流"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/interaction-flow", skillsSh:"interaction-flow", installCmd:"claude skills add interaction-flow",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill cognitive-walkthrough",
     scene:"设计某个功能的完整交互流程，包含正常路径、异常处理和边界情况",
     input:"【功能名称】…\n【用户目标】…\n【前置条件】…\n【涉及角色】…\n【已知业务规则】…\n【需要考虑的异常】…",
     steps:"1) 明确起点和终点\n2) 绘制主流程（Happy Path）\n3) 补充分支：权限校验、输入校验、空状态、网络异常\n4) 标注每步的页面/组件和交互方式\n5) 检查闭环：所有分支最终都能回到正常状态或明确终止\n6) 输出流程图描述 + 页面清单",
@@ -37,7 +37,7 @@ const skills = [
     quality:"主流程完整、异常覆盖率 ≥ 80%、每个分支有回归路径", boundary:"不做高保真原型；复杂流程建议分模块输出"
   },
   { id:"S-0005", name:"可用性启发式评估", type:"skill", value:"基于 Nielsen 十大原则对界面进行系统化可用性走查，输出问题清单和优化建议", stage:"评审/测试", tags:["交互设计","可用性","评估"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/heuristic-evaluation", skillsSh:"heuristic-evaluation", installCmd:"claude skills add heuristic-evaluation",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill nielsen-heuristics-audit",
     scene:"对已有设计稿或线上页面做可用性审查，发现体验问题",
     input:"【产品/页面名称】…\n【截图或描述】…\n【目标用户】…\n【核心任务】…\n【当前已知问题】…",
     steps:"1) 逐条对照 Nielsen 十大可用性原则\n2) 每条原则下记录：是否违反 / 问题描述 / 严重程度(1-4)\n3) 按严重程度排序\n4) 给出具体修改建议（文案/布局/交互）\n5) 输出评估报告",
@@ -45,7 +45,7 @@ const skills = [
     quality:"十大原则逐条覆盖、严重度分级合理、建议具体可执行", boundary:"不替代真实用户测试；主观判断需标注\"评估者观点\""
   },
   { id:"S-0006", name:"设计规范与 Design Token 生成", type:"skill", value:"从品牌关键词或参考图快速生成完整的设计规范和 Token 体系", stage:"设计", tags:["视觉设计","设计规范","Design Token"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/design-token-gen", skillsSh:"design-token-gen", installCmd:"claude skills add design-token-gen",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill ui-design-review",
     scene:"从零建立或统一产品的视觉规范体系",
     input:"【产品名称】…\n【品牌关键词】（如：专业、温暖、科技感）\n【产品类型】（B端/C端/App/Web）\n【参考品牌或风格】…\n【特殊要求】（无障碍/暗黑模式等）",
     steps:"1) 解析品牌关键词 → 视觉风格方向\n2) 生成颜色系统：主色/辅色/中性色/语义色，含完整色阶\n3) 生成字体系统：字体族/字号梯度/行高/字重\n4) 生成间距系统：4px 基准递增\n5) 生成圆角/阴影/动效 Token\n6) 输出 CSS 变量代码",
@@ -53,7 +53,7 @@ const skills = [
     quality:"Token 命名语义化、色彩对比度 ≥ 4.5:1（WCAG AA）、梯度完整", boundary:"不生成具体 UI 组件稿；品牌色需人工确认"
   },
   { id:"S-0007", name:"UI 组件规范审查与优化", type:"skill", value:"审查 UI 组件是否符合设计规范，输出不一致项和修复建议", stage:"评审/测试", tags:["视觉设计","组件","规范审查"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/ui-component-audit", skillsSh:"ui-component-audit", installCmd:"claude skills add ui-component-audit",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill ui-design-review",
     scene:"检查设计稿或前端实现是否与设计系统/规范保持一致",
     input:"【设计规范/Token 文档】…\n【待审查页面/组件描述】…\n【审查范围】（颜色/字体/间距/圆角/图标…）\n【优先级】（全量/核心页面）",
     steps:"1) 对照 Token 逐项检查：颜色值、字号、间距、圆角\n2) 标记不一致项：位置 + 现状 + 应为\n3) 检查响应式适配一致性\n4) 检查状态样式一致性（hover/active/disabled/error）\n5) 按严重度分级并给出修复建议",
@@ -61,7 +61,7 @@ const skills = [
     quality:"检查项完整、问题定位精确到组件+属性、修复建议可直接执行", boundary:"需提供设计规范作为基准；无规范时先用 S-0006 生成"
   },
   { id:"S-0008", name:"设计稿走查与开发还原度检查", type:"skill", value:"对比设计稿与前端实现，自动生成还原度差异清单", stage:"评审/测试", tags:["视觉设计","走查","还原度"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/design-qa-check", skillsSh:"design-qa-check", installCmd:"claude skills add design-qa-check",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill ui-design-review",
     scene:"对比设计稿与实际开发实现的差异",
     input:"【设计稿截图/链接】…\n【前端实现截图/URL】…\n【对照规范/Token】…\n【重点检查区域】…",
     steps:"1) 像素级对比设计稿与实现\n2) 标注差异点：位置 + 设计值 + 实现值\n3) 分类（布局/颜色/字体/间距/交互/动效）\n4) 严重度标记（P0阻塞/P1重要/P2建议）\n5) 生成走查清单",
@@ -69,7 +69,7 @@ const skills = [
     quality:"差异精确到像素级 · 分类明确 · 修复优先级清晰", boundary:"需同时提供设计稿和实现截图/URL"
   },
   { id:"S-0009", name:"空状态与异常态设计方案", type:"skill", value:"系统化梳理产品中所有空状态和异常态场景，输出完整的设计方案", stage:"设计", tags:["交互设计","空状态","异常处理"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/empty-state-design", skillsSh:"empty-state-design", installCmd:"claude skills add empty-state-design",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill don-norman-principles-audit",
     scene:"梳理产品中所有需要处理的空白和异常场景",
     input:"【产品页面清单】…\n【数据来源类型】…\n【用户操作流程】…",
     steps:"1) 场景枚举（首次/无数据/搜索无结果/网络异常/权限/加载失败）\n2) 每类设计引导文案和插图方向\n3) 交互建议（引导操作/重试/跳转）\n4) 视觉风格方案",
@@ -77,7 +77,7 @@ const skills = [
     quality:"场景覆盖全面 · 文案友好 · 交互可行 · 有行动引导", boundary:"复杂产品按模块分批输出"
   },
   { id:"S-0010", name:"产品配色方案生成与评估", type:"skill", value:"基于品牌调性和场景需求，生成科学的配色方案并评估可用性", stage:"设计", tags:["视觉设计","配色","色彩"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/color-scheme-gen", skillsSh:"color-scheme-gen", installCmd:"claude skills add color-scheme-gen",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill ui-design-review",
     scene:"需要为产品选择或优化配色方案",
     input:"【品牌调性】…\n【行业类型】…\n【场景需求】…\n【参考竞品色彩】…",
     steps:"1) 解析品牌关键词 → 色彩方向\n2) 生成主色/辅色/中性色\n3) 语义色定义\n4) 对比度验证（WCAG AA/AAA）\n5) 暗黑模式色彩适配",
@@ -85,7 +85,7 @@ const skills = [
     quality:"色彩对比度达标 · 色板完整 · 适配亮暗模式", boundary:"品牌色需人工确认；屏幕色差需实机验证"
   },
   { id:"S-0011", name:"WCAG 无障碍合规审计", type:"skill", value:"基于 WCAG 2.1/2.2 标准进行完整的无障碍可访问性审计", stage:"评审/测试", tags:["交互设计","无障碍","WCAG","合规","可访问性"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/wcag-audit", skillsSh:"wcag-audit", installCmd:"claude skills add wcag-audit",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill wcag-accessibility-audit",
     scene:"确保产品符合无障碍标准，覆盖 POUR 四大原则",
     input:"【产品/页面 URL】…\n【目标等级】（A/AA/AAA）\n【重点检查范围】…",
     steps:"1) 可感知检查\n2) 可操作检查\n3) 可理解检查\n4) 稳健性检查\n5) 生成合规报告 + 修复建议",
@@ -93,7 +93,7 @@ const skills = [
     quality:"覆盖 POUR 四原则 · 标注 WCAG 条款号 · 修复优先级明确", boundary:"自动工具无法检测所有问题，需配合人工审查"
   },
   { id:"S-0012", name:"认知走查 Cognitive Walkthrough", type:"skill", value:"模拟新手用户认知过程，逐步分析任务完成中的可学习性问题", stage:"评审/测试", tags:["交互设计","可用性","认知走查","可学习性","任务分析"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/cognitive-walkthrough", skillsSh:"cognitive-walkthrough", installCmd:"claude skills add cognitive-walkthrough",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill cognitive-walkthrough",
     scene:"评估界面对新手用户的友好度和可学习性",
     input:"【任务描述】…\n【用户画像】…\n【界面截图/原型】…\n【预期步骤】…",
     steps:"1) 定义用户和任务\n2) 分解为具体操作步骤\n3) 每步四问评估：\n   - 用户会尝试达成正确效果？\n   - 用户会注意到正确操作？\n   - 用户会将操作与期望关联？\n   - 操作后用户能看到进展？\n4) 标记卡点和困惑\n5) 输出走查报告",
@@ -101,7 +101,7 @@ const skills = [
     quality:"认知四问逐步覆盖 · 卡点定位精确 · 改进建议具体", boundary:"基于模拟认知，需真实用户测试验证"
   },
   { id:"S-0013", name:"Don Norman 设计原则审计", type:"skill", value:"基于《设计心理学》7 大原则评估界面设计", stage:"评审/测试", tags:["交互设计","设计原则","可用性","人性化设计","诺曼门"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/norman-principles-audit", skillsSh:"norman-principles-audit", installCmd:"claude skills add norman-principles-audit",
+    github:"🔗 GitHub", skillsSh:"📦 skills.sh", installCmd:"npx skills add mastepanoski/claude-skills --skill don-norman-principles-audit",
     scene:"用设计心理学原则评估产品设计",
     input:"【产品/页面描述】…\n【目标用户】…\n【核心交互】…",
     steps:"1) 可发现性评估\n2) 功能可见性评估\n3) 示能评估\n4) 约束分析\n5) 映射评估\n6) 反馈评估\n7) 概念模型评审",
@@ -109,7 +109,7 @@ const skills = [
     quality:"七大原则逐条覆盖 · 结合具体案例 · 建议可操作", boundary:"理论分析，需结合实际用户数据"
   },
   { id:"S-0014", name:"微信小程序 UI/UX 设计", type:"skill", value:"面向微信小程序的 UI/UX 专业技能包", stage:"设计", tags:["交互设计","视觉设计","微信小程序","移动端","UX","Design Token"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"https://github.com/anthropics/anthropic-quickstarts/tree/main/knowledge-work-plugins/design/skills/wechat-miniprogram-ux", skillsSh:"wechat-miniprogram-ux", installCmd:"claude skills add wechat-miniprogram-ux",
+    github:"CodeBuddy 官方 Skill 市场", skillsSh:"CodeBuddy Skill Store", installCmd:"CodeBuddy IDE 内置 -> 设置 -> Skill -> 搜索 wechat-miniprogram-ui-ux -> 安装",
     scene:"微信小程序界面设计，符合平台约束和原生体验",
     input:"【页面类型】（list/detail/form/dashboard/feed…）\n【用户目标】…\n【设计约束】…\n【参考小程序】…",
     steps:"步骤 1：需求理解 → 确认页面类型、用户目标\n步骤 2：反模式过滤 → 检查网页风格直接复制\n步骤 3：设计系统建立 → 色彩/字体/间距/动效\n步骤 4：小程序原生实现 → WXML+WXSS+rpx",
@@ -117,7 +117,7 @@ const skills = [
     quality:"符合微信设计规范 · 移动端优先 · 原生体验一致", boundary:"仅适用于微信小程序，非通用网页 UI；针对移动端窄视口优先"
   },
   { id:"S-0015", name:"海外网页适配审计 (Global Web Adapt)", type:"skill", value:"评估中文 UI 在英文/全球化后的文本溢出、截断、布局错位风险", stage:"设计", tags:["交互设计","视觉设计","国际化","海外适配","出海"], status:"可用", version:"v1.0", maintainer:"anyong", updated:"2026-04",
-    github:"本地 Skill (无 GitHub 链接)", skillsSh:"global-web-adapt", installCmd:"@skill://global-web-adapt\n\n文件路径: /Users/anyong/CodeBuddy/Claw/skills/global-web-adapt/",
+    github:"本地 Skill (无 GitHub 链接)", skillsSh:"global-web-adapt", installCmd:"@skill://global-web-adapt\n\n文件路径:\n/Users/anyong/CodeBuddy/Claw/skills/global-web-adapt/",
     scene:"产品出海时评估多语言适配风险",
     input:"【页面截图】…\n【中英文案对照】…\n【目标语言和市场】…",
     steps:"Step 1: 识别高风险组件\n🔴 高风险：按钮、Tab标签、导航栏标题、表格表头、标签/徽章\n🟡 中风险：表单标签、卡片标题、空状态文案\n🟢 低风险：正文段落、长描述文本\n\nStep 2: 计算文本膨胀率\n| 中文字符数 | 英文预估长度 | 膨胀率 |\n| 2 字 | 6-10 字符 | 150%-250% |\n| 4 字 | 10-18 字符 | 125%-225% |\n\nStep 3: 布局弹性检测\nStep 4: 生成审计报告",
